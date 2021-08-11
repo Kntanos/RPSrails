@@ -6,26 +6,14 @@ class RockPaperScissors
         end
   
         def play_round()
-          "You played #{person_1.choice} and Computer played #{person_2.choice}."
+          outcome = "You played #{person_1.choice} and Computer played #{person_2.choice}.\n"
           combo = { "scissors" => "paper", "paper" => "rock", "rock" => "scissors" }
           if person_1.choice == person_2.choice
-           "It's a draw!"
+           outcome + "It's a draw!"
           elsif combo[person_1.choice] == person_2.choice
-            "Kostas won!"
+            outcome + "Kostas won!"
           else
-            "Computer won!"
+            outcome + "Computer won!"
           end
         end
 end
-
-    class Player
-        attr_accessor :name, :choice
-        def initialize(name)
-            @name = name
-            @choice = make_choice
-        end
-  
-        def make_choice
-            ["rock", "paper", "scissors"].sample
-        end
-    end
