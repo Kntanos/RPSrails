@@ -64,6 +64,6 @@ class PlayersController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def player_params
-      params.require(:player).permit(:name, :wins)
+      params.require(:player).permit(:name, :wins, :num_of_games)
     end
 end

@@ -4,11 +4,10 @@ class HomeController < ApplicationController
 
   def play; end
 
-  def play_game
-    @player_1 = Player.find_by(name: "Kostas")
+  def play_game 
+    @player_1 = Player.new(name: "Kostas")
     @player_2 = Player.new(name: "Computer")
     @game = RockPaperScissors.new(@player_1, @player_2)
     @game.play_round
   end
-
 end

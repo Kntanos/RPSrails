@@ -6,14 +6,15 @@ class RockPaperScissors
         end
   
         def play_round()
-          outcome = "You played #{person_1.choice} and Computer played #{person_2.choice}.\n"
+          outcome = "You played #{person_1.choice} and Computer played #{person_2.choice}. "
           combo = { "scissors" => "paper", "paper" => "rock", "rock" => "scissors" }
           if person_1.choice == person_2.choice
-           outcome + "It's a draw!"
+            outcome + "It's a draw!"
           elsif combo[person_1.choice] == person_2.choice
-            outcome + "Kostas won!"
+            outcome + "#{person_1.name} won!"
           else
-            outcome + "Computer won!"
+            outcome + "#{person_2.name} won!"
           end
         end
 end
+ 
