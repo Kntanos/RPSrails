@@ -1,7 +1,7 @@
 <h1> Make your choice! </h1>
 <br/>
-<%= link_to 'ROCK', "/play_game", class: "btn btn-primary" %>
+<%= link_to 'ROCK', "/play_game/#{params[:name]}", class: "btn btn-primary" %>
 
-<%= link_to 'PAPER', play_game_path, class: "btn btn-primary" %>
+<!%= link_to 'PAPER', play_game_path, class: "btn btn-primary" %>
 
-<%= link_to 'SCISSORS', play_game_path, class: "btn btn-primary" %>
+<!%= link_to 'SCISSORS', play_game_path, class: "btn btn-primary" %>
